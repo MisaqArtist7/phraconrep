@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/styles/output.css" />
+    <title>STSM</title>
+  </head>
+  <body>
+    <!-- image efect full page -->
+    <div class="bg-transparent bg-[url('../../public/images/art-top00.png')] absolute w-full h-full bg-cover bg-right z-[-1] left-0 top-0"></div>
+
+    <svg class="hidden">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="close-svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="searchIcon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </symbol>
+      <symbol
+        id="icon-chevron-down"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+
+      <symbol
+        id="compony"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
+        />
+      </symbol>
+
+      <symbol
+        id="user"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+        />
+      </symbol>
+
+      <symbol
+        id="chevron_left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        />
+      </symbol>
+
+      <symbol
+        id="chevron_right"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+        />
+      </symbol>
+    </svg>
+
+    <header class="relative">
+      <div class="absolute top-0 right-0 z-[-1]">
+        <img src="../public/images/Decore.svg" alt="" />
+      </div>
+
+      <section class="bg-white shadow z-50">
+        <div class="container py-6">
+          <nav class="flex justify-between items-center">
+            <div class="flex justify-between items-center w-full">
+              <button
+                id="menuHeaderShow"
+                class="xl:hidden p-1 flex items-center gap-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-8"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                  <span>Menu</span>
+                </svg>
+              </button>
+              <div class="xl:max-w-[150px] w-full flex justify-center">
+                <a
+                  href="/"
+                  class="inline-block nav__link font-semibold sm:ml-12 xl:ml-0"
+                >
+                  <img
+                    src="../public/images/PHRACONREP.png"
+                    alt=""
+                    class="xl:w-full w-[250px] xl:h-full"
+                  />
+                </a>
+              </div>
+              <ul
+                class="xl:flex gap-4 w-full text-[var(--lowOpacityText)] hidden"
+              >
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="#" class="nav__link group">
+                    About
+                    <svg
+                      class="nav__icon inline w-5 h-5 transform transition-transform duration-300 group-hover:rotate-180"
+                    >
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul class="nav__submenu-list">
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"
+                          >About Phraconrep</a
+                        >
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">Deliverables</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"
+                          >Memorandum of Understanding (MoU)</a
+                        >
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"
+                          >New addition: Impact & Achievements</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="../pages/network.html" class="nav__link group"
+                    >Network
+                    <svg class="inline w-5 h-5">
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul
+                      class="nav__submenu-list flex flex-col justify-center gap-[2px]"
+                    >
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">All</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"
+                          >Leadership positions
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"
+                          >MC representatives</a
+                        >
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">WG1</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">WG2</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">WG3</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">WG4</a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">WG5</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="#" class="nav__link group">
+                    Opportunities
+                    <svg class="inline w-5 h-5">
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul
+                      class="nav__submenu-list flex flex-col justify-center gap-[2px]"
+                    >
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          STSM (Short Term Scientific Missions)
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Virtual Mobility Network
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Conference Grants
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="#" class="nav__link group">
+                    Activities & Events
+                    <svg class="inline w-5 h-5">
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul
+                      class="nav__submenu-list flex flex-col justify-center gap-[2px]"
+                    >
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Upcoming Events
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Training Schools
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Network Meetings
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Conferences & Workshops
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Streamlined from original "News & Events"
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="#" class="nav__link group">
+                    Resources
+                    <svg class="inline w-5 h-5">
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul
+                      class="nav__submenu-list flex flex-col justify-center gap-[2px]"
+                    >
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"> Publications </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          News & Press Releases
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link"> FAQ </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Centralized resource hub
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav__item--has-submenu relative">
+                  <a href="#" class="nav__link group">
+                    Join Us
+                    <svg class="inline w-5 h-5">
+                      <use href="#icon-chevron-down"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="nav__submenu shadow border border-gray-200 p-2.5 rounded bg-white absolute top-7 left-0 w-max whitespace-nowrap"
+                  >
+                    <ul
+                      class="nav__submenu-list flex flex-col justify-center gap-[2px]"
+                    >
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          How to Join Phraconrep
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Benefits of Membership
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Application Process
+                        </a>
+                      </li>
+                      <li class="nav__submenu-item">
+                        <a href="" class="nav__submenu-link">
+                          Contact Information
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <form action="" id="">
+                <search class="bg-white shadow-gray-400 shadow-sm flex h-full">
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    name="search"
+                    id="search"
+                    class="w-full px-4 py-2"
+                  />
+                  <button class="p-2">
+                    <svg class="size-6">
+                      <use href="#searchIcon"></use>
+                    </svg>
+                  </button>
+                </search>
+              </form>
+            </div>
+          </nav>
+          <div id="menuContainer" class="window transition">
+            <div class="max-w-[300px] h-full w-full menuBg px-4 overflow-auto">
+              <div class="flex justify-end">
+                <button
+                  class="p-4 hover:opacity-75 transition-opacity"
+                  id="closeMenuContainer"
+                >
+                  <svg class="size-8">
+                    <use xlink:href="#close-svg"></use>
+                  </svg>
+                </button>
+              </div>
+              <nav class="pb-8">
+                <ul
+                  class="flex flex-col gap-4 w-full text-[var(--lowOpacityText)] *:hover:opacity-75 *:transition-opacity"
+                >
+                  <li class="">
+                    <a href="#" class="nav__link">Home</a>
+                  </li>
+                  <li class=" ">
+                    <a href="#" class="nav__link">
+                      About
+                      <svg class="">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"
+                            >About Phraconrep</a
+                          >
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">Deliverables</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"
+                            >Memorandum of Understanding (MoU)</a
+                          >
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"
+                            >New addition: Impact & Achievements</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class=" ">
+                    <a href="#" class="nav__link"
+                      >Network
+                      <svg class="inline w-5 h-5">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">All</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"
+                            >Leadership positions
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"
+                            >MC representatives</a
+                          >
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">WG1</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">WG2</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">WG3</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">WG4</a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">WG5</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class=" ">
+                    <a href="#" class="nav__link">
+                      Opportunities
+                      <svg class="inline w-5 h-5">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            STSM (Short Term Scientific Missions)
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Virtual Mobility Network
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Conference Grants
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class=" ">
+                    <a href="#" class="nav__link">
+                      Activities & Events
+                      <svg class="inline w-5 h-5">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Upcoming Events
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Training Schools
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Network Meetings
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Conferences & Workshops
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Streamlined from original "News & Events"
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class=" ">
+                    <a href="#" class="nav__link">
+                      Resources
+                      <svg class="inline w-5 h-5">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Publications
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            News & Press Releases
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link"> FAQ </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Centralized resource hub
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class=" ">
+                    <a href="#" class="nav__link">
+                      Join Us
+                      <svg class="inline w-5 h-5">
+                        <use href="#icon-chevron-down"></use>
+                      </svg>
+                    </a>
+                    <div
+                      class="w-full rounded h-0 overflow-hidden opacity-0 menuDropDown transition-opacity"
+                    >
+                      <ul class="nav__submenu-list space-y-2 p-4">
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            How to Join Phraconrep
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Benefits of Membership
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Application Process
+                          </a>
+                        </li>
+                        <li class="nav__submenu-item">
+                          <a href="" class="nav__submenu-link">
+                            Contact Information
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="md:px-4 py-16">
+      <section class="container">
+        <div>
+          <h1 class="h1TitlesTextSize">Short-Term Scientific Missions</h1>
+
+          <div>
+            <p>
+              Short-Term Scientific Missions, commonly referred to as STSMs, represent a dynamic and collaborative exchange program integral to COST Actions.
+            </p>
+            <p>
+As stated by the COST Association, Short-term Scientific Missions (STSMs) are exchange visits for researchers within the COST Action they are a member, such as the COST Action CA22115 “PhraConRep.” STSMs are opportunities for researchers to share techniques and gain skills that may not be available at their home institution.
+            </p>
+            <p>
+                STSMs serve as a platform for scientists and innovators to immerse themselves in a different cultural and scientific environment. By visiting a host institution or laboratory in a participating COST Member state, these researchers have the unique opportunity to access new techniques, data, instruments, and methodologies that might not be available in their home institutions or laboratories. This access not only enriches their own research capabilities but also contributes significantly to the overarching scientific objectives of the relevant COST Action.
+            </p>
+            <p>
+              The program is designed to support individual mobility, thereby strengthening existing networks and fostering the development of new international collaborations. For the researchers or innovators participating in STSMs, this opportunity is a pathway to acquiring new skills, knowledge, and perspectives, which can have a profound impact on their ongoing research projects. Simultaneously, host institutions benefit from expanding their international contacts and establishing long-lasting collaborative relationships, which can lead to further scientific advancements and discoveries..
+            </p>
+          </div>
+        </div>
+        <div>
+          <h1 class="h1TitlesTextSize">Call for STSM</h1>
+          <div>
+            <p>
+              The document in the
+              <a href="#" class="font-bold text-['none']">link</a> provides
+              information on the eligibility criteria, duration and funding
+              rules, information requested in the application procedure, the
+              evaluation criteria concerning the proposal, and steps to follow
+              in the Grant Awarding Process.
+            </p>
+            <p>
+              The duration of the STSM should not overlap across two consecutive
+              Grant Periods. Grant Period 2 for PHRACONREP is
+              01/11/2024–31/10/2025. For the active grant period an approved
+              STSM should end before October 2025.
+            </p>
+            <p>
+              We would like to draw your attention to the fact that during this
+              grant period, your applications can be submitted at any time until
+              the <span class="font-bold ">15th of July 2025</span> (subject to
+              budget availability). However, the applications will be evaluated
+              after three collection dates:
+            </p>
+            <ul>
+              <li><span>28th of February 2025; </span></li>
+              <li><span>15th of May 2025;</span></li>
+              <li><span>15th of July 2025.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../dist/scripts/main.js"></script>
+  </body>
+</html>
