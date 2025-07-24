@@ -882,12 +882,6 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
-  .lg\:text-9xl {
-    @media (width >= 64rem) {
-      font-size: var(--text-9xl);
-      line-height: var(--tw-leading, var(--text-9xl--line-height));
-    }
-  }
   .xl\:ml-0 {
     @media (width >= 80rem) {
       margin-left: calc(var(--spacing) * 0);
