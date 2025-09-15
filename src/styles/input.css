@@ -12,7 +12,7 @@
   .btn {
     @apply border border-black hover:bg-black hover:text-white transition duration-75 cursor-pointer py-2 px-11 rounded-xs;
   }
-
+  
   /* Helper classes */
   .flex-row-center {
     @apply flex justify-center items-center;
@@ -124,8 +124,9 @@ body {
   background: rgb(245, 245, 245);
 }
 p {
-  text-align: justify;
+  text-align: left;
   font-size: 18px;
+
 }
 button {
   @apply cursor-pointer;
@@ -151,3 +152,31 @@ input {
   transform: scale(1.05);
   cursor: pointer;
 }
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+
+    /* Breakpoints */
+    @media (min-width: 40rem) { /* 640px */
+      max-width: 40rem;
+    }
+
+    @media (min-width: 48rem) { /* 768px */
+      max-width: 48rem;
+    }
+
+    @media (min-width: 64rem) { /* 1024px */
+      max-width: 64rem;
+    }
+
+    @media (min-width: 80rem) { /* 1280px */
+      max-width: 80rem;
+    }
+
+    @media (min-width: 96rem) { /* 1536px */
+      max-width: 96rem;
+    }
+  }
